@@ -76,6 +76,7 @@
       </div>
     </main>
     <main id="play" class="play hidden">
+      <div id="world" class="world hidden" aria-hidden="true"></div>
       <div id="environment" class="environment"></div>
       <div class="beam"></div>
       <div class="vignette"></div>
@@ -95,21 +96,26 @@
           <div id="roomNumber" class="eyebrow"></div>
           <h2 id="roomName"></h2>
           <p id="roomMood"></p>
+          <div id="viewName" class="view-name hidden"></div>
         </section>
         <div id="stageSlot" class="stage-slot" aria-hidden="true"></div>
         <div class="scene-bottom">
           <div>
             <div id="narration" class="narration" aria-live="polite"></div>
+            <p id="sceneNotice" class="scene-notice hidden" role="status"></p>
+            <section id="closeup" class="closeup hidden"></section>
             <nav id="objectNav" class="location-nav" aria-label="Oggetti nella stanza"></nav>
             <div class="utility">
               <div id="progress" class="progress"></div>
               <button id="journalBtn">Taccuino & inventario</button><button id="labelsBtn">Mostra indizi visivi</button>
             </div>
+            <div id="inventory" class="inventory hidden" aria-label="Inventario"></div>
           </div>
           <button id="doorBtn" class="door-btn primary"></button>
         </div>
       </div>
       <div id="map" class="map"></div>
+      <button id="viewPrev" class="view-nav hidden">‹</button><button id="viewNext" class="view-nav hidden">›</button>
       <div class="access-note">Il menu mette in pausa il tempo.</div>
     </main>
     <div id="overlay" class="overlay hidden">

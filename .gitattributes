@@ -1,0 +1,4 @@
+# Fine riga LF ovunque: la build è riproducibile byte per byte anche su Windows.
+* text=auto eol=lf
+*.jpg binary
+*.png binary
