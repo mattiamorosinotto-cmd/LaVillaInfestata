@@ -1,0 +1,27 @@
+{
+  "name": "villa-ultima-ora",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Villa dell’Ultima Ora: escape room horror narrativa per browser, a file unico.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "test:e2e": "node tests/e2e/play.mjs dist/index.html",
+    "parity": "node tests/parity/compare.mjs reference/fase0.html dist/index.html",
+    "check": "npm test && npm run build && npm run test:e2e",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "playwright": "1.56.0",
+    "pngjs": "^7.0.0",
+    "prettier": "^3.6.2",
+    "vite": "^8.3.5",
+    "vite-plugin-singlefile": "^2.3.4"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

@@ -1,0 +1,32 @@
+VILLA DELL’ULTIMA ORA — EDIZIONE IMMERSIVA
+
+AVVIO
+Apri il file index.html nel browser. È un file unico con grafica, suoni e codice incorporati: si apre con un doppio clic, funziona offline e si carica così com’è su qualunque hosting. Nessun server, database o chiave API. Su smartphone consigliamo un normale indirizzo web: le anteprime dei file delle app potrebbero non eseguire JavaScript.
+
+COSA CAMBIA
+Immagine della villa fornita dall’utente incorporata nella copertina a tutto schermo e nelle finestre. Interni vettoriali originali rifatti con prospettiva, texture, ombre e luci fredde/calde: NON sono fotografie fotorealistiche. Interfaccia sovrapposta alla scena, senza sidebar. Nebbia, particelle, luce mobile e transizioni lente disattivabili. Luminosità regolabile. Personaggi con piccoli ritratti originali. Enigmi e difficoltà invariati.
+
+AUDIO
+Entra con audio o Ascolta il bosco per attivare il suono. Motore Web Audio con vento e pioggia stereo, riverbero, droni armonici e microeventi ambientali. Atrio: pendolo e legno. Biblioteca: carta, scricchiolii, registro armonico diverso. Studio: risonanze basse. Suoni per apertura porte, raccolta documenti, passi, tentativi e meccanismi risolti. Nessun jumpscare né picco improvviso intenzionale. La lettura dei dialoghi con la voce del dispositivo è facoltativa e sperimentale: qualità e disponibilità dipendono dal sistema. Non sono voci recitate o registrate. Non attivarla se preferisci conservare l’atmosfera senza sintesi vocale.
+
+REGOLE
+Tre stanze e sei enigmi complessi. Tre suggerimenti per ciascuno. Dialoghi e documenti consumano tempo. 20 minuti iniziali complessivi. Alla scadenza riparti soltanto dalla stanza corrente con 20 nuovi minuti. Le stanze precedenti restano completate. Menu e cambio scheda mettono in pausa. Gli aiuti già rivelati restano disponibili. Taccuino e inventario si aggiornano automaticamente.
+
+PRIVACY E SALVATAGGI
+Grafica e suono sono integrati: il gioco non effettua richieste a siti esterni. Nessun analytics o account. La sintesi vocale opzionale potrebbe usare servizi di rete del dispositivo. I salvataggi sono locali e non sincronizzati, con un numero di versione: i salvataggi delle edizioni precedenti (anche il vecchio villa-ultima-ora-v1) vengono aggiornati automaticamente, se il browser consente di accedere allo stesso localStorage. Cambiando file o dominio il recupero non è garantito.
+
+ACCESSIBILITÀ
+Oggetti accessibili dai rombi nella scena oppure dai pulsanti testuali. Su smartphone in verticale la stanza appare intera tra titolo e testo; in orizzontale sta a sinistra del testo. Etichette visive attivabili. Supporto tastiera, focus nei dialoghi, impostazioni per movimento ridotto e luminosità. Nessun enigma richiede il suono. Nessun lampeggio. Effetti di luce graduali.
+
+VERIFICHE AUTOMATICHE
+Il gioco è accompagnato da tre livelli di test, descritti nel README del progetto:
+- 41 test del motore: salvataggi, macchina a stati e coerenza dei contenuti, compresa una soluzione unica per ogni enigma;
+- una partita completa nel browser con 30 controlli: i 28 della Fase 0 più 2 nuovi;
+- un confronto passo per passo con la versione precedente.
+Non sostituiscono le prove su iPhone e Android reali, Safari e l’ascolto in cuffia.
+
+PERSONALIZZAZIONE
+Si lavora sul progetto sorgente, non su questo file: testi, stanze, enigmi e dialoghi sono nei file JSON di src/content/it/, e npm run build ricrea index.html. Scenografie: src/scene/art.js. Audio: src/audio/audioWorld.js. Durata: TOTAL_MS in src/engine/save.js. Immagine: src/assets/villa.jpg, usata una sola volta come sfondo e riusata nelle finestre. Oggetti cliccabili: "objects" in rooms.json, con coordinate della scena 1536×960. Ore degli orologi: "faces" in puzzles.json, da tenere uguali al testo dell’enigma (un test lo controlla). Tutto il codice è client-side, con soluzioni leggibili nel sorgente. Verifica i diritti sull’immagine fornita prima di una pubblicazione pubblica o commerciale.
+
+VERSIONE
+1.1.0 · Fase 1 del piano di miglioramento: nuova base con moduli JavaScript e build Vite, contenuti in JSON, macchina a stati per il flusso, salvataggi versionati con migrazione automatica, test automatici. Gioco, enigmi e difficoltà identici alla Fase 0.

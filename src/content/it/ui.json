@@ -1,0 +1,92 @@
+{
+  "gameTitle": "Villa dell’Ultima Ora",
+  "roomNumber": "STANZA {n} / {total}",
+  "doorSuffix": " →",
+  "solvedMark": "✓ ",
+  "labels": { "show": "Mostra indizi visivi", "hide": "Nascondi indizi visivi" },
+  "previewAudio": { "off": "Ascolta il bosco", "on": "Silenzia il bosco" },
+  "transitions": {
+    "start": "Il portone si apre. Da dentro.",
+    "resume": "La casa non ha dimenticato.",
+    "retry": "Ancora una volta.",
+    "ending": "Questa volta, il mattino."
+  },
+  "notify": {
+    "audioUnavailable": "Audio non disponibile. Il gioco resta utilizzabile senza suono.",
+    "audioBlocked": "Il browser non ha avviato l’audio. Prova dal pulsante AUDIO.",
+    "solved": "Un ingranaggio si libera · {name}",
+    "lowQuality": "Effetti di movimento ridotti per mantenere il gioco fluido. Puoi riattivarli dal menu."
+  },
+  "document": { "note": "Annotato nel taccuino. Il tempo continua a scorrere." },
+  "dialogue": {
+    "askSuffix": " &nbsp; →",
+    "note": "Le risposte ascoltate vengono conservate nel taccuino."
+  },
+  "puzzle": {
+    "submit": "Apri",
+    "digitsLabel": "Codice di {length} cifre",
+    "placeholderChar": "·",
+    "sequenceEmpty": "—",
+    "sequenceCheck": "Verifica",
+    "sequenceClear": "Cancella",
+    "lightsReset": "Ripristina matrice",
+    "lightLabel": "Luce {n}",
+    "lightOn": " accesa",
+    "lightOff": " spenta",
+    "solvedPrefix": "✓ Il meccanismo è risolto. ",
+    "solvedAnswer": "Risposta: {answer}.",
+    "wrong": "Un movimento a vuoto. Il meccanismo non scatta.",
+    "hintNext": "Rivela suggerimento {n} / 3",
+    "hintsDone": "Tre suggerimenti rivelati"
+  },
+  "doorLocked": {
+    "title": "La porta non cede",
+    "html": "<p>Qualcosa, dentro il muro, tiene fermo il chiavistello.</p><p>Restano da risolvere:</p>"
+  },
+  "restart": {
+    "title": "Ricominciare la notte?",
+    "text": "La nuova partita sostituirà quella salvata. Gli enigmi e la difficoltà restano invariati.",
+    "newGame": "Nuova partita",
+    "keepGame": "Riprendi quella salvata"
+  },
+  "timeout": {
+    "title": "La stanza ha dimenticato.",
+    "html": "<p>Le lancette si sovrappongono. Per un istante ricordi ogni volta che sei già stato qui.</p><p>Ripartirai soltanto da questa stanza con 20 nuovi minuti. Le stanze superate resteranno completate. I suggerimenti già rivelati rimarranno disponibili.</p>",
+    "retry": "Ricomincia questa stanza"
+  },
+  "ending": {
+    "title": "Il bosco ricomincia a respirare.",
+    "html": "<p>Il portone si apre. Da qualche parte tra gli alberi, un uccello rompe il silenzio.</p><div class=\"dialogue\">«Mamma?»<br>«Sono qui, Ada.»</div><p>Alle tue spalle, l’ultima finestra si spegne.</p>",
+    "time": "TEMPO GIOCATO",
+    "hints": "AIUTI RIVELATI",
+    "restarts": "RIAVVII",
+    "again": "Un’altra notte"
+  },
+  "journal": {
+    "title": "Quello che ricordi",
+    "intro": "Il tempo continua a scorrere mentre consulti gli appunti.",
+    "inventory": "Inventario",
+    "empty": "Nessun oggetto raccolto.",
+    "notes": "Documenti e conversazioni"
+  },
+  "settings": {
+    "titleAuto": "Il tempo ti aspetta.",
+    "title": "Un momento di silenzio.",
+    "introAuto": "Hai cambiato scheda o applicazione. La partita è in pausa.",
+    "intro": "La partita è in pausa. Regola l’ambiente prima di tornare nella stanza.",
+    "volume": "Volume dell’ambiente",
+    "volumeHelp": "Vento, pioggia, risonanze e dettagli spaziali. Nessun picco improvviso.",
+    "brightness": "Visibilità della stanza",
+    "brightnessHelp": "Mantieni l’atmosfera cupa senza perdere gli oggetti.",
+    "motion": "Nebbia, particelle e luce mobile",
+    "voice": "Lettura dei dialoghi con voce del dispositivo",
+    "voiceHelp": "(sperimentale, qualità variabile)",
+    "backRoom": "Torna nella stanza",
+    "backLanding": "Torna alla villa",
+    "exit": "Salva ed esci"
+  },
+  "landingInfo": {
+    "title": "Prima di varcare la soglia",
+    "html": "<p>Esplora gli oggetti nei punti luminosi o usa i pulsanti in basso. Parla con i tre personaggi: le loro risposte e i documenti letti finiscono nel taccuino.</p><p>Hai 20 minuti complessivi. Ogni enigma offre tre suggerimenti progressivi. Alla scadenza riparti solo dalla stanza corrente con 20 nuovi minuti. Dialoghi e documenti consumano tempo; il menu mette in pausa.</p><h3>Suono e accessibilità</h3><p>Premi “Entra con audio” o “Ascolta il bosco” per autorizzare l’audio. L’ambiente cambia nelle tre stanze. Nessun indizio richiede l’ascolto. Nel menu puoi regolare volume e luminosità o disattivare gli effetti di movimento.</p><h3>Immagini e privacy</h3><p>La tua immagine della villa è incorporata nel gioco, anche nelle vedute dalle finestre. Gli interni sono scenografie vettoriali originali, non fotografie. Non ci sono richieste a siti esterni, account, analytics o file da scaricare durante il gioco. Progressi locali al browser.</p><p class=\"muted\">La lettura facoltativa dei dialoghi usa la sintesi vocale del dispositivo: disponibilità, qualità e possibile uso di servizi di rete dipendono dal sistema.</p>"
+  }
+}

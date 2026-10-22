@@ -1,0 +1,103 @@
+{
+  "clock": {
+    "name": "Il tempo nello specchio",
+    "input": "digits",
+    "item": "Frammento del sigillo · I",
+    "faces": [3, 7, 10, 5],
+    "text": "Quattro orologi analogici da 12 ore, con i minuti sul 12. Li osservi attraverso uno specchio verticale. Il cassetto sottostante richiede quattro cifre.",
+    "doc": "<h3>Un riflesso non è una testimonianza</h3><p>«Dal primo nato all’ultimo. Leggi l’ora vera, non la sua immagine. Ogni ora è una cifra.»</p><div class=\"grid-clues\"><div>VIOLA · riflesso: 03:00</div><div>LEONE · riflesso: 07:00</div><div>ELENA · riflesso: 10:00</div><div>ADA · riflesso: 05:00</div></div>",
+    "answer": "9527",
+    "length": 4,
+    "hints": [
+      "Il registro dei ritratti dà l’ordine. Lo specchio cambia il valore delle ore.",
+      "Somma ora reale e ora riflessa: il risultato è 12. Prima ordina le persone per anno di nascita crescente.",
+      "Viola → 9, Leone → 5, Elena → 2, Ada → 7. Inserisci 9527."
+    ]
+  },
+  "gears": {
+    "name": "Il quadro dei contrappesi",
+    "input": "digits",
+    "item": "Chiave della biblioteca",
+    "text": "Tre ruote numerate, A, B e C, azionano il chiavistello interno. Inserisci i valori nell’ordine A–B–C.",
+    "doc": "<h3>Equilibrio del meccanismo</h3><p style=\"text-align:center;letter-spacing:.1em;line-height:2.2\">A + B = 4<br>B + C = 5<br>A + C = 7</p><p>Ogni ruota ammette una cifra da 0 a 9. Tutte le uguaglianze devono essere vere contemporaneamente.</p>",
+    "answer": "314",
+    "length": 3,
+    "hints": [
+      "Devi trovare le incognite. Non leggere i risultati come una combinazione.",
+      "Somma la prima e la terza equazione, poi sottrai la seconda: 2A = 6.",
+      "A = 3, B = 1, C = 4. Inserisci 314."
+    ]
+  },
+  "cipher": {
+    "name": "La serratura delle parole",
+    "input": "word",
+    "item": "Frammento del sigillo · II",
+    "text": "Cinque cilindri alfabetici. Sul bordo è inciso «Il messaggero notturno».",
+    "doc": "<h3>Il messaggio del terzo scaffale</h3><p style=\"font-size:33px;letter-spacing:.3em;text-align:center\">FRUYR</p><p>«Ho spostato ogni lettera di tre passi avanti. Chi torna indietro ritrova il nome.»</p><small>Alfabeto inciso: ABCDEFGHIJKLMNOPQRSTUVWXYZ.<br>Dopo Z si ricomincia da A.</small>",
+    "answer": "CORVO",
+    "length": 5,
+    "inputLabel": "Parola di cinque lettere",
+    "hints": [
+      "È uno spostamento alfabetico, non un anagramma. Devi annullarlo.",
+      "Torna indietro di tre lettere nell’alfabeto a 26 caratteri: F diventa C, R diventa O.",
+      "F→C, R→O, U→R, Y→V, R→O. La parola è CORVO."
+    ]
+  },
+  "sequence": {
+    "name": "La processione dei simboli",
+    "input": "symbols",
+    "item": "Passaggio segreto aperto",
+    "text": "Cinque simboli, cinque posizioni. Ogni simbolo va premuto una sola volta.",
+    "doc": "<h3>La processione silenziosa</h3><p>Il Sole chiude la processione.<br>Il Corvo segue immediatamente la Luna.<br>L’Occhio precede la Luna.<br>La Chiave viene dopo il Corvo.</p><small>«Precede» e «viene dopo» non significano necessariamente «immediatamente».</small>",
+    "answer": "01234",
+    "symbols": [
+      { "symbol": "◉", "name": "Occhio" },
+      { "symbol": "☾", "name": "Luna" },
+      { "symbol": "♞", "name": "Corvo" },
+      { "symbol": "⚿", "name": "Chiave" },
+      { "symbol": "☀", "name": "Sole" }
+    ],
+    "solvedNote": "Occhio → Luna → Corvo → Chiave → Sole.",
+    "hints": [
+      "Il Sole è sicuramente quinto. La coppia Luna–Corvo non può essere separata.",
+      "Prima della coppia serve l’Occhio. Dopo serve la Chiave. Prima del Sole ci sono solo quattro posti.",
+      "Occhio → Luna → Corvo → Chiave → Sole."
+    ]
+  },
+  "safe": {
+    "name": "La cassaforte del notaio",
+    "input": "digits",
+    "item": "Sigillo ricomposto",
+    "text": "Tre cifre distinte da 0 a 9; lo zero iniziale è consentito. Ogni nota descrive esattamente tutte le corrispondenze del tentativo.",
+    "doc": "<h3>Verbale dei tentativi</h3><div class=\"grid-clues\"><div>682 · Una cifra corretta e al posto giusto.</div><div>614 · Una cifra corretta, ma al posto sbagliato.</div><div>206 · Due cifre corrette, entrambe al posto sbagliato.</div><div>738 · Nessuna cifra corretta.</div><div>780 · Una cifra corretta, ma al posto sbagliato.</div></div><small>Le cifre non contate come corrette sono assenti dal codice.</small>",
+    "answer": "042",
+    "length": 3,
+    "hints": [
+      "738 esclude 7, 3 e 8. In 780 la cifra corretta è quindi 0, ma non è terza.",
+      "In 682 non è 8. Se fosse 6 al primo posto, 614 contraddirebbe la posizione: è 2 al terzo posto. Da 206, 0 non è secondo e quindi è primo.",
+      "Hai 0 _ 2. In 614 la cifra corretta e fuori posto è 4. Il codice è 042."
+    ]
+  },
+  "lights": {
+    "name": "La matrice del vincolo",
+    "input": "lights",
+    "item": "Vincolo spezzato",
+    "text": "Spegni tutte le nove luci. Ogni pressione inverte quella luce e le vicine ortogonali: sopra, sotto, a destra e a sinistra. Non le diagonali.",
+    "doc": "<h3>L’ultima annotazione di Elena</h3><p>«Ogni gesto lascia un’impronta sulle altre. Ripetere lo stesso gesto due volte lo cancella.»</p><small>Numerazione per righe, dall’alto a sinistra: 1–2–3, poi 4–5–6, infine 7–8–9.</small>",
+    "solvedNote": "Il vincolo è spezzato.",
+    "locked": { "requires": "safe", "text": "Il sigillo protegge ancora il meccanismo. Apri prima la cassaforte." },
+    "hints": [
+      "Puoi agire per righe: per cambiare una luce della prima riga premi quella subito sotto. Se vuoi ripartire dalla configurazione iniziale, usa “Ripristina matrice”.",
+      "dynamic",
+      "dynamic"
+    ],
+    "dynamicHints": {
+      "next": "Dallo stato attuale, una soluzione inizia premendo {moves}. Il suggerimento si aggiorna a ogni mossa.",
+      "nextDone": "Tutte le luci sono già spente.",
+      "full": "Dallo stato attuale premi una volta ciascuna di queste posizioni: {moves}. Non premere le altre. L’ordine non conta.",
+      "fullDone": "Il vincolo è già spezzato.",
+      "pairJoiner": " e ",
+      "listJoiner": ", "
+    }
+  }
+}

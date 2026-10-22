@@ -1,0 +1,53 @@
+{
+  "atrio": {
+    "intro": "«Ti aspettavo. No, non da stasera. Da molto prima. Puoi ancora uscire. Ma gli orologi… li stai guardando dalla parte sbagliata.»",
+    "questions": [
+      {
+        "ask": "Chi sei?",
+        "answer": "«Ettore. Custodisco ciò che resta della famiglia Valdombra. La signora Elena voleva salvare sua figlia. Ha fermato la casa, non la morte.»"
+      },
+      {
+        "ask": "Come apro la porta?",
+        "answer": "«Memoria ed equilibrio. Gli anni di nascita sono nel registro. Le tre ruote, invece, devono rispettare tutte le uguaglianze insieme.»"
+      },
+      {
+        "ask": "E se il tempo finisce?",
+        "answer": "«La stanza dimentica. Le porte già attraversate restano alle tue spalle. Un nuovo giro e avrai ancora venti minuti.»"
+      }
+    ]
+  },
+  "biblioteca": {
+    "intro": "«Non sono arrabbiata perché mi hai svegliata. Sono arrabbiata perché tutti parlano piano, come se io non sapessi già.»",
+    "questions": [
+      {
+        "ask": "Chi ha scritto la lettera?",
+        "answer": "«La mamma. Tre passi avanti nascondono una parola. Tre indietro la fanno tornare. Il suo alfabeto aveva ventisei lettere, anche quelle straniere.»"
+      },
+      {
+        "ask": "E i simboli?",
+        "answer": "«Non sono numeri. Sono una fila. Il Corvo non lascia la Luna da sola, nemmeno per un posto. Il Sole arriva per ultimo.»"
+      },
+      {
+        "ask": "Vuoi venire con me?",
+        "answer": "«Io sono già uscita, tanto tempo fa. È la mamma che non riesce a lasciarmi andare. Dille che non ho più paura del buio.»"
+      }
+    ]
+  },
+  "studio": {
+    "intro": "«Ada ti ha parlato? Allora la casa sta cedendo. Ho conservato la sua voce così a lungo da non ricordare più il silenzio.»",
+    "questions": [
+      {
+        "ask": "Perché sono qui?",
+        "answer": "«La casa cerca una presenza per tenere viva l’ora. Se spezzi il vincolo, non potrà più cercare nessuno.»"
+      },
+      {
+        "ask": "Come rompo il vincolo?",
+        "answer": "«Il sigillo nella cassaforte. Poi le nove luci. Toccano le loro vicine, mai le diagonali. Spegnile tutte. Il portone ti riconoscerà.»"
+      },
+      {
+        "ask": "Ada non ha più paura.",
+        "answer": "«Allora posso smettere di vegliare. Non era il buio a tenermi qui. Era la paura di dimenticare il suo viso.»"
+      }
+    ]
+  }
+}

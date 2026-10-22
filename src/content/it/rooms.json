@@ -1,0 +1,67 @@
+[
+  {
+    "id": "atrio",
+    "name": "L’atrio degli orologi",
+    "mood": "La pioggia è rimasta fuori. Il freddo no.",
+    "person": "Ettore, il custode",
+    "tag": "La voce nel citofono",
+    "intro": "Il portone si chiude alle tue spalle. Nel citofono passa un respiro. «Sei tornato», dice una voce. Tu non ricordi di essere mai stato qui.",
+    "puzzles": ["clock", "gears"],
+    "objects": [
+      { "label": "Registro dei ritratti", "id": "doc", "x": 378, "y": 606 },
+      { "label": "Orologi riflessi", "id": "clock", "x": 772, "y": 348 },
+      { "label": "Contrappesi", "id": "gears", "x": 1192, "y": 546 },
+      { "label": "Citofono", "id": "talk", "x": 170, "y": 561 }
+    ],
+    "door": "Apri la biblioteca",
+    "exitTransition": "Dall’altra parte, qualcuno sfoglia un libro.",
+    "asides": [
+      "La lancetta dei secondi si ferma. Poi recupera il tempo perduto.",
+      "Dal piano di sopra, un passo. Uno soltanto.",
+      "L’odore di cera è più forte vicino allo specchio."
+    ]
+  },
+  {
+    "id": "biblioteca",
+    "name": "La biblioteca dei ritratti",
+    "mood": "Un libro è aperto su una pagina bianca. La carta è tiepida.",
+    "person": "Ada, la bambina nel ritratto",
+    "tag": "L’olio sulla tela non è ancora asciutto",
+    "intro": "Lo scaffale scricchiola senza che tu lo tocchi. La bambina nel ritratto abbassa gli occhi. «Parla piano. La mamma crede ancora che io stia dormendo».",
+    "puzzles": ["cipher", "sequence"],
+    "objects": [
+      { "label": "Lettera sul leggio", "id": "doc", "x": 446, "y": 578 },
+      { "label": "Serratura alfabetica", "id": "cipher", "x": 788, "y": 394 },
+      { "label": "Fregio dei simboli", "id": "sequence", "x": 1179, "y": 494 },
+      { "label": "Ritratto di Ada", "id": "talk", "x": 359, "y": 396 }
+    ],
+    "door": "Apri il passaggio",
+    "exitTransition": "Lo scaffale si apre. La voce è più vicina.",
+    "asides": [
+      "Una pagina si solleva. Non c’è vento.",
+      "La bambina nel ritratto guarda un punto dietro di te.",
+      "Dal muro arriva il rumore lontano della pioggia."
+    ]
+  },
+  {
+    "id": "studio",
+    "name": "Lo studio di Elena",
+    "mood": "Qui nessun orologio ha le lancette.",
+    "person": "Elena, la padrona della villa",
+    "tag": "Il riflesso non imita i tuoi movimenti",
+    "intro": "Nello specchio c’è una donna. Non sei tu. «Non ho costruito una prigione», sussurra. «Volevo soltanto un’altra ora con lei».",
+    "puzzles": ["safe", "lights"],
+    "objects": [
+      { "label": "Contratto sul tavolo", "id": "doc", "x": 430, "y": 643 },
+      { "label": "Cassaforte", "id": "safe", "x": 1195, "y": 546 },
+      { "label": "Matrice del vincolo", "id": "lights", "x": 777, "y": 662 },
+      { "label": "Specchio di Elena", "id": "talk", "x": 765, "y": 250 }
+    ],
+    "door": "Lascia la villa",
+    "asides": [
+      "Nello specchio, la finestra è aperta. Nella stanza è chiusa.",
+      "Le nove luci scaldano appena la superficie del tavolo.",
+      "Elena muove le labbra. Non arriva nessun suono."
+    ]
+  }
+]

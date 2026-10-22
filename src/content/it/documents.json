@@ -1,0 +1,17 @@
+{
+  "atrio": {
+    "title": "Il registro dei ritratti",
+    "journalTitle": "Registro dei ritratti",
+    "html": "<h3>Registro della famiglia Valdombra</h3><p>ELENA — nata nel 1870<br>ADA — nata nel 1892<br>VIOLA — nata nel 1841<br>LEONE — nato nel 1856</p><p>«Le targhe non sono in ordine. In questa casa l’età apre più porte del rango.»</p>"
+  },
+  "biblioteca": {
+    "title": "La lettera di Elena",
+    "journalTitle": "Lettera di Elena",
+    "html": "<h3>Ada, se senti la mia voce</h3><p>Non cercarmi dietro il ritratto. Cerca il messaggero sul terzo scaffale. Gli ho affidato la strada per lo studio.</p><p>Il fregio non racconta una notte: racconta un ordine. Ogni figura aspetta quella che la precede.</p><p>— Mamma</p>"
+  },
+  "studio": {
+    "title": "Il contratto",
+    "journalTitle": "Il contratto",
+    "html": "<h3>Il contratto dell’Ultima Ora</h3><p>La villa può trattenere una sola ora, ma chi vi resta dentro perde il ricordo delle precedenti.</p><p>Il sigillo è chiuso nella cassaforte. La matrice, finché il sigillo non sarà ricomposto, continuerà a proteggersi.</p><p>Spegni ogni luce. Poi apri la porta. Questa volta, non voltarti.</p>"
+  }
+}
