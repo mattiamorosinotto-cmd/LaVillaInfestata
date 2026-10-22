@@ -115,7 +115,7 @@ Per cambiare il formato: aggiungere in `MIGRATIONS` (in `src/engine/save.js`) la
 - **Partita nel browser** (`npm run test:e2e`). Comprende:
   - la partita completa, con l'atrio giocato con le mani: lancette trascinate col mouse e girate da tastiera, peso trascinato sul quadro, ruote, chiave sulla porta;
   - pausa (anche mentre la porta si apre), tempo scaduto in vista ravvicinata, ricarica a metà atrio, vecchi salvataggi;
-  - fluidità, smartphone in verticale e in orizzontale, rotazione del telefono durante la vista ravvicinata;
+  - fluidità, camera animata aprendo e chiudendo la vista ravvicinata, smartphone in verticale e in orizzontale, rotazione del telefono durante la vista ravvicinata;
   - l'atrio senza WebGL (disegno 2D di PixiJS) e senza nessun disegno (solo i controlli DOM).
 
   In locale il test usa la GPU vera: su Windows chiede a Chromium il D3D11, altrimenti la modalità headless ripiega sul WebGL software. Con `CI=true` (GitHub Actions lo imposta da sé) usa il WebGL software SwiftShader. Il budget del fotogramma si cambia con `FRAME_BUDGET_MS`: è 20 ms in locale e 50 ms in CI, dove il controllo ferma solo i peggioramenti gravi.

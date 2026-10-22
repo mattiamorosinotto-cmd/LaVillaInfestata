@@ -22,7 +22,7 @@ Oggetti accessibili dai rombi nella scena oppure dai pulsanti testuali. Su smart
 VERIFICHE AUTOMATICHE
 Il gioco è accompagnato da tre livelli di test, descritti nel README del progetto:
 - 76 test del motore: salvataggi, macchina a stati, meccanismi e coerenza dei contenuti, compresa una soluzione unica per ogni enigma e l'accordo fra indizi e disegni dell'atrio;
-- una partita completa nel browser con 52 controlli, con l'atrio giocato con mouse, dita e tastiera, anche senza WebGL;
+- una partita completa nel browser con 54 controlli, con l'atrio giocato con mouse, dita e tastiera, anche senza WebGL;
 - un confronto passo per passo con la Fase 0, da lanciare a mano.
 Non sostituiscono le prove su iPhone e Android reali, Safari e l’ascolto in cuffia.
 
