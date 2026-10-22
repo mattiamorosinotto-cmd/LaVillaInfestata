@@ -2,7 +2,7 @@
 
 Escape room horror narrativa per browser: tre stanze, sei enigmi, venti minuti. Questa è la base di sviluppo della **Fase 1** del piano: lo stesso gioco della Fase 0, riorganizzato in moduli, con i contenuti in JSON, una macchina a stati per il flusso, salvataggi versionati e test automatici.
 
-La build è **un solo file**, `dist/index.html` (circa 225 KB, foto inclusa): si apre con un doppio clic, funziona offline e si pubblica su qualunque hosting statico. L'`index.html` nella cartella principale invece è la pagina sorgente usata da Vite: aperto con un doppio clic mostra solo un avviso che rimanda qui.
+Il gioco è **un solo file**, `index.html` nella cartella principale (circa 225 KB, foto inclusa): si apre con un doppio clic, funziona offline e si pubblica su qualunque hosting statico. È **generato** da `npm run build` a partire da `sorgente.html` e dalla cartella `src/`: le modifiche si fanno lì, mai su `index.html`.
 
 ## Comandi
 
@@ -12,8 +12,8 @@ Serve Node.js 22.12 o più recente.
 npm install                       # una volta sola
 npx playwright install chromium   # una volta sola, per i test nel browser
 
-npm run dev        # server di sviluppo con ricarica automatica (http://localhost:5173)
-npm run build      # crea dist/index.html
+npm run dev        # server di sviluppo con ricarica automatica (http://localhost:5173/sorgente.html)
+npm run build      # rigenera index.html (e la copia per i test in dist/index.html)
 npm run check      # test del motore + build + partita completa nel browser: da lanciare prima di ogni consegna
 
 npm test           # solo i test del motore (pochi secondi, senza browser)
@@ -25,7 +25,8 @@ npm run format     # formatta il codice con Prettier
 ## Struttura
 
 ```
-index.html               markup della pagina (schermata iniziale, HUD, modale)
+index.html               IL GIOCO, generato da npm run build: non modificarlo a mano
+sorgente.html            markup della pagina (schermata iniziale, HUD, modale), punto di partenza di Vite
 src/
   main.js                avvio: collega i moduli ed espone window.VILLA
   game.js                flusso di gioco: avvio, porte, tempo, pausa, finale
@@ -93,11 +94,30 @@ Per cambiare il formato: aggiungere in `MIGRATIONS` (in `src/engine/save.js`) la
   - le 28 verifiche della Fase 0, cioè partita completa, rombi cliccati davvero, pausa, tempo scaduto, ricarica, vecchi salvataggi, fluidità, smartphone in verticale e in orizzontale;
   - due verifiche nuove: gli stati attraversati e la migrazione di un salvataggio v1.
 
-  Il test gira anche sul file della Fase 0 (`node tests/e2e/play.mjs reference/fase0.html`). Il budget del fotogramma si cambia con `FRAME_BUDGET_MS` (in CI è 34 ms perché i runner non hanno GPU).
+  Il test gira anche sul file della Fase 0 (`node tests/e2e/play.mjs reference/fase0.html`). Il budget del fotogramma si cambia con `FRAME_BUDGET_MS` (in CI è 50 ms: i runner di GitHub non hanno GPU e lì il controllo ferma solo i peggioramenti gravi).
 
 - **Parità** (`npm run parity`): gioca 50 passi identici su `reference/fase0.html` e sulla build, con orologio finto e caso pilotato. A ogni passo confronta DOM, salvataggi, focus e screenshot. Chromium senza GPU non rasterizza sempre allo stesso modo: i filtri SVG variano di 1–5 livelli su 255 e qualche bordo arriva a una ventina. Per questo sono ammessi scarti fino a 8 livelli, più al massimo 100 pixel di bordo fino a 64. Un testo, un colore o un elemento spostato superano di molto questi limiti: un ritocco di 18 livelli al colore oro produce già oltre 600 pixel oltre soglia. È il criterio di passaggio della Fase 1; va tolto quando una fase successiva cambierà volutamente il gioco.
 
-`.github/workflows/test.yml` esegue tutto a ogni push e pull request su GitHub, e allega screenshot e gioco compilato come artefatti.
+`.github/workflows/test.yml` esegue tutto a ogni push e pull request su GitHub e allega gli screenshot dei test come artefatti. Controlla anche che `index.html` corrisponda al codice: la build è riproducibile byte per byte, quindi se qualcuno ha cambiato `src/` senza lanciare `npm run build` il workflow fallisce e lo dice. La parità con la Fase 0 segnala le differenze senza far fallire il workflow.
+
+## Pubblicazione su GitHub Pages
+
+GitHub Pages pubblica il repository così com'è: `index.html` nella cartella principale è il gioco. Il file `.nojekyll` evita che GitHub rielabori i file prima di pubblicarli; `dist/` resta fuori dal repository (è in `.gitignore`).
+
+1. Crea su GitHub un repository **pubblico** (con un account gratuito Pages non pubblica i repository privati) senza README né altri file.
+2. Nella cartella del progetto:
+   ```sh
+   git init -b main
+   git add .
+   git commit -m "Villa dell'Ultima Ora 1.1.0"
+   git remote add origin https://github.com/UTENTE/REPOSITORY.git
+   git push -u origin main
+   ```
+   In alternativa: da VS Code, «Publish to GitHub» nel pannello Controllo del codice sorgente.
+3. Nel repository: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, poi branch **main** e cartella **/ (root)**, e **Save**.
+4. Dopo un paio di minuti il gioco è su `https://UTENTE.github.io/REPOSITORY/`.
+
+Per ogni aggiornamento: modifica `src/` o i JSON, lancia `npm run build` (o `npm run check`, che fa anche i test), poi commit e push. GitHub ripubblica da solo il nuovo `index.html`. Il percorso del sito non conta: il gioco è un file unico senza riferimenti esterni.
 
 ## window.VILLA
 
