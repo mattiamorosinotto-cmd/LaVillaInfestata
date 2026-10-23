@@ -111,12 +111,12 @@ Per cambiare il formato: aggiungere in `MIGRATIONS` (in `src/engine/save.js`) la
 
 ## Test
 
-- **Motore** (`npm test`, 85 test): matrice delle luci, suggerimenti dinamici e orientati, timer, macchina a stati, salvataggi e migrazioni fino a v4, quadranti, ruote e inventario, camera (inquadrature e vista ravvicinata, `src/scene/camera.js`), coerenza dei contenuti e unicità delle soluzioni, e la corrispondenza fra indizi e disegni dell'atrio (ore riflesse, nomi al contrario, anni sulle targhette, equazioni).
+- **Motore** (`npm test`, 90 test): matrice delle luci, suggerimenti dinamici e orientati, timer, macchina a stati, salvataggi e migrazioni fino a v4, quadranti, ruote e inventario, camera (inquadrature e vista ravvicinata, `src/scene/camera.js`), griglia dei ritratti e degli orologi sul telefono (`src/scene/arrange.js`), coerenza dei contenuti e unicità delle soluzioni, e la corrispondenza fra indizi e disegni dell'atrio (ore riflesse, nomi al contrario, anni sulle targhette, equazioni).
 - **Partita nel browser** (`npm run test:e2e`). Comprende:
   - la partita completa, con l'atrio giocato con le mani: lancette trascinate col mouse e girate da tastiera, peso trascinato sul quadro, ruote, chiave sulla porta;
   - pausa (anche mentre la porta si apre e con il menu aperto in vista ravvicinata), tempo scaduto in vista ravvicinata, ricarica a metà atrio, vecchi salvataggi;
   - fluidità, camera animata aprendo e chiudendo la vista ravvicinata;
-  - telefono (iPhone 13) in verticale e in orizzontale: pagina che non scorre, scena grande, comandi, foglio della vista ravvicinata e tasca a portata di dito, peso trascinato col dito, swipe, vibrazione, rotazione durante la vista ravvicinata;
+  - telefono (iPhone 13) in verticale e in orizzontale: pagina che non scorre, scena grande, comandi, foglio della vista ravvicinata e tasca a portata di dito, ritratti e orologi in due file da due e solo sul telefono, quadro ingrandito, scena di altezza fissa con messaggi di una o due righe, etichette degli oggetti nel cassetto che non coprono i quadranti, peso trascinato col dito, swipe, vibrazione, rotazione durante la vista ravvicinata;
   - l'atrio senza WebGL (disegno 2D di PixiJS) e senza nessun disegno (solo i controlli DOM).
 
   In locale il test usa la GPU vera: su Windows chiede a Chromium il D3D11, altrimenti la modalità headless ripiega sul WebGL software. Con `CI=true` (GitHub Actions lo imposta da sé) usa il WebGL software SwiftShader. Il budget del fotogramma si cambia con `FRAME_BUDGET_MS`: è 20 ms in locale e 50 ms in CI, dove il controllo ferma solo i peggioramenti gravi.
