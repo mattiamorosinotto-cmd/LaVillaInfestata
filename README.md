@@ -111,11 +111,12 @@ Per cambiare il formato: aggiungere in `MIGRATIONS` (in `src/engine/save.js`) la
 
 ## Test
 
-- **Motore** (`npm test`, 76 test): matrice delle luci, suggerimenti dinamici e orientati, timer, macchina a stati, salvataggi e migrazioni fino a v4, quadranti, ruote e inventario, coerenza dei contenuti e unicità delle soluzioni, e la corrispondenza fra indizi e disegni dell'atrio (ore riflesse, nomi al contrario, anni sulle targhette, equazioni).
+- **Motore** (`npm test`, 85 test): matrice delle luci, suggerimenti dinamici e orientati, timer, macchina a stati, salvataggi e migrazioni fino a v4, quadranti, ruote e inventario, camera (inquadrature e vista ravvicinata, `src/scene/camera.js`), coerenza dei contenuti e unicità delle soluzioni, e la corrispondenza fra indizi e disegni dell'atrio (ore riflesse, nomi al contrario, anni sulle targhette, equazioni).
 - **Partita nel browser** (`npm run test:e2e`). Comprende:
   - la partita completa, con l'atrio giocato con le mani: lancette trascinate col mouse e girate da tastiera, peso trascinato sul quadro, ruote, chiave sulla porta;
-  - pausa (anche mentre la porta si apre), tempo scaduto in vista ravvicinata, ricarica a metà atrio, vecchi salvataggi;
-  - fluidità, camera animata aprendo e chiudendo la vista ravvicinata, smartphone in verticale e in orizzontale, rotazione del telefono durante la vista ravvicinata;
+  - pausa (anche mentre la porta si apre e con il menu aperto in vista ravvicinata), tempo scaduto in vista ravvicinata, ricarica a metà atrio, vecchi salvataggi;
+  - fluidità, camera animata aprendo e chiudendo la vista ravvicinata;
+  - telefono (iPhone 13) in verticale e in orizzontale: pagina che non scorre, scena grande, comandi, foglio della vista ravvicinata e tasca a portata di dito, peso trascinato col dito, swipe, vibrazione, rotazione durante la vista ravvicinata;
   - l'atrio senza WebGL (disegno 2D di PixiJS) e senza nessun disegno (solo i controlli DOM).
 
   In locale il test usa la GPU vera: su Windows chiede a Chromium il D3D11, altrimenti la modalità headless ripiega sul WebGL software. Con `CI=true` (GitHub Actions lo imposta da sé) usa il WebGL software SwiftShader. Il budget del fotogramma si cambia con `FRAME_BUDGET_MS`: è 20 ms in locale e 50 ms in CI, dove il controllo ferma solo i peggioramenti gravi.
@@ -167,5 +168,12 @@ Nelle stanze nella forma nuova solo il motore cambia lo stato. Le azioni del gio
 PixiJS disegna soltanto. Ogni controllo è un elemento DOM posizionato con la camera, così mouse, dita, tastiera, lettori di schermo e test usano gli stessi controlli. A riposo la scena non ridisegna. Senza WebGL PixiJS ripiega sul disegno 2D; se non parte del tutto, un avviso spiega che si gioca dai controlli e dalle descrizioni.
 
 Il controllo automatico della qualità ora aspetta che la scena sia pronta. Spegne nebbia, polvere e luce mobile solo se il gioco resta lento in due misure a 4 secondi di distanza.
+
+Sul telefono (`body[data-stage]` vale `framed` in verticale e `side` in orizzontale) lo schermo è il gioco e la pagina non scorre:
+
+- la scena prende lo spazio fra la barra in alto e quella in basso (taccuino e tasca);
+- in verticale la camera inquadra il riquadro `frame` di ogni vista, scritto in `rooms.json`. La validazione controlla che contenga tutti gli oggetti della vista;
+- la vista ravvicinata è un foglio sopra la parte bassa della scena: chiuso mostra nome, aiuto e «Dettagli»; la camera mette l'oggetto sopra il foglio;
+- in orizzontale la scena sta a sinistra e il pannello scorre nella colonna di destra.
 
 Manca la prova con 5 persone che non conoscono il gioco (vedi [PIANO.md](PIANO.md)).

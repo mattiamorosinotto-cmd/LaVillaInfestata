@@ -8,7 +8,7 @@ Aggiornato il 22 ottobre 2026 · @Mattia-KP
 
 - **Oggi** il gioco funziona dall'inizio alla fine, senza errori, e i sei enigmi hanno una sola soluzione. Però si gioca a finestre: clicchi un oggetto, si apre un foglio, lo leggi e digiti un codice.
 - **L'obiettivo** è che la stanza diventi il luogo in cui si gioca. La regola guida è una: **ogni indizio si vede nella scena, ogni soluzione si fa con le mani.**
-- **A che punto siamo:** la Fase 0 (correzioni) e la Fase 1 (fondamenta del codice) sono finite. Della Fase 2 è pronto l'atrio nella nuova forma (versione 1.2.0).
+- **A che punto siamo:** la Fase 0 (correzioni) e la Fase 1 (fondamenta del codice) sono finite. Della Fase 2 è pronto l'atrio nella nuova forma (versione 1.2.0), anche nella versione per telefono, dove la pagina non scorre e la scena occupa quasi tutto lo schermo (versione 1.3.0).
 - **Prossimo passo:** far provare l'atrio a 5 persone che non conoscono il gioco, prima di toccare le altre stanze.
 
 ## Le fasi
